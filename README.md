@@ -1,25 +1,20 @@
-# Operation Daycare policy site
+# Operation Daycare policies
 
-Public safety, privacy, terms, and support pages for Operation Daycare.
+Static privacy, terms, and support pages for Operation Daycare. There is no
+runtime, package manager, database, analytics script, cookie, or paid hosting.
 
-## Routes
+GitHub Actions validates the required pages and publishes the `site/` directory
+to GitHub Pages after changes reach `main`.
 
-- `/` — safety and support overview
-- `/privacy` — privacy policy
-- `/terms` — terms of use
-- `/support` — support and account-deletion help
+## Public routes
+
+- `/operation-daycare-legal/`
+- `/operation-daycare-legal/privacy/`
+- `/operation-daycare-legal/terms/`
+- `/operation-daycare-legal/support/`
 
 ## Local validation
 
-Requires Node.js 22.13 or later.
-
 ```bash
-npm ci
-npm test
-npm run lint
-npm audit
+node tests/validate.mjs
 ```
-
-The production site is managed by OpenAI Sites. Its opaque project identifier
-is stored in `.openai/hosting.json`; runtime credentials and secrets must not be
-committed to this directory.
