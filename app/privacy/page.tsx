@@ -1,0 +1,139 @@
+import type { Metadata } from "next";
+import { PolicyPage } from "../site-chrome";
+
+export const metadata: Metadata = {
+  title: "Privacy policy",
+  description: "How Operation Daycare collects, uses, retains, and protects family information.",
+};
+
+export default function PrivacyPolicy() {
+  return (
+    <PolicyPage
+      eyebrow="Your information"
+      title="Privacy policy"
+      introduction="Duba Tech Studio built Operation Daycare for adult family members and caregivers. This policy describes the information the app and family service use to provide shared drop-off monitoring."
+    >
+      <section>
+        <h2>Information we collect</h2>
+        <h3>Account and family information</h3>
+        <p>
+          We store the display name an adult provides through Sign in with Apple, Apple’s private
+          account identifier for the app, family membership and role, and credentials that let a
+          joined device access the correct family. We do not receive an Apple password.
+        </p>
+        <h3>Child, daycare, and schedule information</h3>
+        <p>
+          Adult organizers may provide child names, daycare names and map pins, geofence radius,
+          time zone, weekly or rotating schedules, one-time schedule changes, and history-retention
+          preferences. Families should provide only the information necessary to use the service.
+        </p>
+        <h3>Arrival and notification information</h3>
+        <p>
+          The family service stores reported drop-off and pickup events, whether an arrival was
+          automatic or manual, missed-drop-off alert history, push-delivery records, device
+          identifiers, and Apple Push Notification service tokens. Daycare arrival detection runs
+          on the iPhone. We do not receive or store a continuous route or live location history.
+        </p>
+        <h3>Subscription and service information</h3>
+        <p>
+          Apple processes payment. We store transaction identifiers, product, environment,
+          expiration, trial, refund, revocation, and billing-grace status so one purchase can cover
+          the app’s family. We may also retain limited application, security, and hosting logs such
+          as request time, error details, and network address when needed to operate and protect the
+          service.
+        </p>
+      </section>
+
+      <section>
+        <h2>How we use information</h2>
+        <ul>
+          <li>Link an adult’s devices to the correct family and restore access on a replacement phone.</li>
+          <li>Share the family’s current configuration and confirmation state with joined adults.</li>
+          <li>Determine whether a scheduled deadline passed without a reported arrival.</li>
+          <li>Send missed-drop-off notifications and provide arrival and pickup history.</li>
+          <li>Verify family-plan coverage and respond to purchase, renewal, refund, and grace-period changes.</li>
+          <li>Prevent abuse, investigate failures, secure the service, and provide support.</li>
+        </ul>
+        <p>We do not sell personal information, run third-party advertising, or use family data for cross-app tracking.</p>
+      </section>
+
+      <section>
+        <h2>When information is shared</h2>
+        <p>
+          Information is visible to adults who join the same Operation Daycare family according to
+          their role. We use service providers such as Apple for identity, purchases, and push
+          notifications, and cloud infrastructure providers for application hosting, databases,
+          backups, and security logs. They receive only the information needed for those services
+          and operate under their own terms and privacy commitments.
+        </p>
+        <p>
+          We may disclose information when required by law, to protect people or the service from
+          fraud or abuse, or as part of a business transfer where the recipient must continue to
+          protect the information described here.
+        </p>
+      </section>
+
+      <section>
+        <h2>Retention and deletion</h2>
+        <p>
+          Arrival and pickup history follows the organizer’s selected retention period. Production
+          application logs are generally retained for up to 30 days. Family configuration,
+          memberships, device registrations, and entitlement records are kept while the family
+          exists or as needed to provide the service and resolve transactions.
+        </p>
+        <p>
+          An organizer can remove members, change history retention, or delete the family and its
+          stored service data. Any adult can initiate deletion of their linked account in the app.
+          Organizers with other family members must first transfer ownership or delete the family.
+          Limited records may be retained when legally required or necessary to resolve fraud,
+          security, tax, or transaction disputes.
+        </p>
+      </section>
+
+      <section>
+        <h2>Your choices</h2>
+        <ul>
+          <li>Turn off location or notification permission in iPhone Settings.</li>
+          <li>Use manual confirmation instead of automatic geofence detection.</li>
+          <li>Ask the organizer to remove your family membership.</li>
+          <li>Delete your linked account from the app.</li>
+          <li>Email us to request access, correction, deletion, or help with a privacy choice.</li>
+        </ul>
+        <p>
+          Changing permissions can prevent automatic detection or missed-drop-off notifications.
+          The app shows when its safety setup is incomplete.
+        </p>
+      </section>
+
+      <section>
+        <h2>Children and adult accounts</h2>
+        <p>
+          Operation Daycare is intended for parents, guardians, and other adult caregivers. It does
+          not offer child accounts and is not directed to children. Adults are responsible for
+          having authority to provide information about children and daycare arrangements.
+        </p>
+      </section>
+
+      <section>
+        <h2>Security and international processing</h2>
+        <p>
+          We use access controls, per-device credentials, encryption in transit, restricted secrets,
+          and other administrative and technical safeguards. No service can guarantee absolute
+          security. Information may be processed in the United States or another location where a
+          service provider operates, subject to applicable safeguards.
+        </p>
+      </section>
+
+      <section>
+        <h2>Changes and contact</h2>
+        <p>
+          We may update this policy as the service changes. We will update the effective date and
+          provide additional notice when a material change requires it.
+        </p>
+        <p>
+          Privacy questions or requests: <a href="mailto:dubatechstudio@gmail.com">dubatechstudio@gmail.com</a>
+        </p>
+      </section>
+    </PolicyPage>
+  );
+}
